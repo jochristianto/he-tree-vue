@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:jochristianto/jochristianto.github.io.git master
 
 # if you are deploying to https://jochristianto.github.io/he-tree-vue
-# git push -f git@github.com:jochristianto/he-tree-vue.git master:gh-pages
+git push -f git@github.com:jochristianto/he-tree-vue.git master:gh-pages
 
 cd -
