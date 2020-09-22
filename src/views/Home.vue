@@ -5,11 +5,20 @@
       <div class="h3">he-tree-vue</div>
     </div>
 
-    <div class="text-center mt-4">
-      <small>
-        The example covers how to get the updated nodes when a drop event is triggered. The full documentation of the component can be found here,
+    <div class="text-center">
+      <div class="mt-4">
+        The example covers how to get the updated nodes when a drop event is triggered.<br />
+        The full documentation of the component can be found here,
         <a href="https://he-tree-vue.phphe.com" target="_blank">https://he-tree-vue.phphe.com</a>.
-      </small>
+      </div>
+
+      <div class="mt-4">
+        <ul>
+          <li><a href="https://he-tree-vue-usage.netlify.app" target="_blank" class="btn btn-outline-primary">Online Preview</a></li>
+          <li><a href="https://github.com/jochristianto/he-tree-vue" target="_blank" class="btn btn-outline-secondary">Source Code</a></li>
+          <li><a href="https://www.npmjs.com/package/he-tree-vue" target="_blank" class="btn btn-outline-success">he-tree-vue on NPM</a></li>
+        </ul>
+      </div>
     </div>
 
     <hr class="my-4" />
@@ -190,4 +199,17 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+ul {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-left: 0.5rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+</style>
