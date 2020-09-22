@@ -59,6 +59,7 @@
 </template>
 
 <script>
+/* eslint-disable no-lonely-if */
 import VueJsonPretty from 'vue-json-pretty';
 import { Tree, Draggable, Fold } from 'he-tree-vue';
 import 'he-tree-vue/dist/he-tree-vue.css'; // base style
@@ -72,6 +73,13 @@ export default {
   data() {
     return {
       treeData: [
+        {
+          id: 911,
+          parent_id: null,
+          name: 'API',
+          description: 'API',
+          children: [],
+        },
         {
           id: 1,
           parent_id: null,
@@ -156,24 +164,26 @@ export default {
   },
   methods: {
     onDrop(e) {
-      // console.info('node', JSON.stringify(e.dragNode));
-      // console.info('path', JSON.stringify(e.startPath), JSON.stringify(e.targetPath));
+      let startParentPath = e.startTree.getNodeParentByPath(e.startPath);
+      let targetParentPath = e.targetTree.getNodeParentByPath(e.targetPath);
 
-      // console.info('parent', JSON.stringify(startPath));
-      // console.info('target', JSON.stringify(targetPath));
+      // If root element get dropped
+      if (typeof startParentPath === 'undefined') startParentPath = e.startTree.rootNode;
+      if (typeof targetParentPath === 'undefined') targetParentPath = e.targetTree.rootNode;
 
-      const startPath = e.startTree.getNodeParentByPath(e.startPath);
-      const targetPath = e.targetTree.getNodeParentByPath(e.targetPath);
-      const sameParent = startPath === targetPath;
+      const sameParent = startParentPath === targetParentPath;
 
-      this.updates = this.process(startPath);
-      if (!sameParent) {
-        this.updates = [...this.updates, ...this.process(targetPath)];
+      if (typeof startParentPath !== 'undefined' && typeof targetParentPath !== 'undefined') {
+        // If not root element get dropped
+        this.updates = this.process(startParentPath);
+        if (!sameParent) {
+          this.updates = [...this.updates, ...this.process(targetParentPath)];
+        }
       }
     },
     process(path) {
       let updates = [];
-      if (path.children) updates = path.children.map((child, index) => ({ id: child.id, parent_id: path.id, index }));
+      if (path && path.children) updates = path.children.map((child, index) => ({ id: child.id, parent_id: path.id, index }));
       return updates;
     },
   },
