@@ -2,7 +2,7 @@
 
 This is an integration example of the [he-tree-vue](https://he-tree-vue.phphe.com/).
 
-To begin, please refer to `src/views/About.vue`.
+To begin, please refer to `src/views/Home.vue`.
 
 Or you can simply clone this repository and take it for a spin.
 

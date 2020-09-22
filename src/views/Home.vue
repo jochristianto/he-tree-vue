@@ -1,12 +1,18 @@
 <template>
   <div class="p-4">
-    <h1>Intergration Example of he-tree-vue</h1>
-
-    <div class="mt-4">
-      <h5>Documentation</h5>
-      The full documentation of the component can be found here,
-      <a href="https://he-tree-vue.phphe.com" target="_blank">https://he-tree-vue.phphe.com</a>.
+    <div class="text-center">
+      <div class="h5 font-weight-normal text-uppercase mb-0">Intergration Example of</div>
+      <div class="h3">he-tree-vue</div>
     </div>
+
+    <div class="text-center mt-4">
+      <small>
+        The example covers how to get the updated nodes when a drop event is triggered. The full documentation of the component can be found here,
+        <a href="https://he-tree-vue.phphe.com" target="_blank">https://he-tree-vue.phphe.com</a>.
+      </small>
+    </div>
+
+    <hr class="my-4" />
 
     <div class="mt-4">
       <div class="row">
