@@ -1,24 +1,17 @@
-# vue-tree
+# he-tree-vue
 
-## Project setup
-```
-yarn install
-```
+This is an integration example of the [he-tree-vue](https://he-tree-vue.phphe.com/).
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+To begin, please refer to `src/views/About.vue`.
 
-### Compiles and minifies for production
-```
-yarn build
-```
+Or you can simply clone this repository and take it for a spin.
 
-### Lints and fixes files
-```
-yarn lint
+```bash
+# Install dependencies
+$ yarn install
+
+# Start the app
+$ yarn serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Once the app started, you can go to http://localhost:8080.

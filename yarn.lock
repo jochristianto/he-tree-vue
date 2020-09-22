@@ -821,7 +821,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.11.0", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -2080,6 +2080,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+
+bootstrap@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.5.2.tgz#a85c4eda59155f0d71186b6e6ad9b875813779ab"
+  integrity sha512-vlGn0bcySYl/iV+BGA544JkkZP5LB3jsmkeKLFQakCOwCM3AOk7VkldBz4jrzSe+Z0Ezn99NVXa1o45cQY4R6A==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -3438,6 +3443,23 @@ dotenv@^8.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
 
+drag-event-service@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/drag-event-service/-/drag-event-service-1.1.7.tgz#aaee3ebfd516bad530bba11ae8e6a85b7f1a83b7"
+  integrity sha512-wKPAzyDBGd8MBUYQWgSlHp6tfnp9sKfNKuZCWIJee3EjYv+MFpB1tfxOnAOx1XgF8HD7WwIOPTVWSQwyM9YtTg==
+  dependencies:
+    "@babel/runtime" "^7.7.7"
+    helper-js "^2.0.0"
+
+draggable-helper@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/draggable-helper/-/draggable-helper-5.0.3.tgz#686985340ebfcf98b5384bfab0eaeba36d7e8b93"
+  integrity sha512-XBEG94PKHesNiu8L/F498yz+pn7DR3a6zXPmGgINULHfStPBYJTD7esJ0yMWDTrsY0rQJtUPalMx5JJLMOIOIA==
+  dependencies:
+    "@babel/runtime" "^7.7.7"
+    drag-event-service "^1.1.7"
+    helper-js "^2.0.0"
+
 duplexer@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
@@ -4665,10 +4687,28 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
+he-tree-vue@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/he-tree-vue/-/he-tree-vue-2.0.3.tgz#4fddc3226fdee581463092013e8456aeee84c86e"
+  integrity sha512-2n7oUnfcEwmKVMfQ0eRfXWR/24wVWukTJJW9nPI6Y12b1O0DgPe2Kb8yBIboQ4r/TmVP1k4B2uzpQ+Dgv92nGQ==
+  dependencies:
+    "@babel/runtime" "^7.7.7"
+    draggable-helper "^5.0.3"
+    helper-js "^2.0.1"
+    vue-functions "^2.0.6"
+    vue-runtime-helpers "^1.1.2"
+
 he@1.2.x, he@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+helper-js@^2.0.0, helper-js@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/helper-js/-/helper-js-2.0.1.tgz#648a6c6e444d3c071f07db9eaa01eb3ca50a317b"
+  integrity sha512-8naDhtjmYUyedxAZNTjx7LuyiiNWnyYCGgkkv3Tox38IBcdfb+7sGxqshxCk3dNiBPwfDp33b25anPh9ZY0Wbw==
+  dependencies:
+    "@babel/runtime" "^7.7.7"
 
 hex-color-regex@^1.1.0:
   version "1.1.0"
@@ -9131,10 +9171,23 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.0.1"
     lodash "^4.17.15"
 
+vue-functions@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/vue-functions/-/vue-functions-2.0.6.tgz#8dd83d4f60699715f323d7119e10a197b2e63882"
+  integrity sha512-c5P62HgQHJe7tIyWQUJGKeK3ziI+cOc3tf/NnwaSGnli89msfyDN0QUFIT9Su7uMcQmf0oMj2PmSh8M4zISxzg==
+  dependencies:
+    "@babel/runtime" "^7.7.7"
+    helper-js "^2.0.0"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
+
+vue-json-pretty@^1.6.7:
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/vue-json-pretty/-/vue-json-pretty-1.6.7.tgz#7dbc0d50d7b30f2ad99dade6541cd57479ff3725"
+  integrity sha512-M7fGSj6yQxl9x3n4cViD5OUUXeXeIfjVfnOQOH+T95qo4wz2BzthBDZzRsKKsf9W5YIFbC1ZWkw50j9cPxxs9w==
 
 "vue-loader-v16@npm:vue-loader@^16.0.0-beta.7":
   version "16.0.0-beta.7"
@@ -9163,6 +9216,11 @@ vue-router@^3.2.0:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.4.3.tgz#fa93768616ee338aa174f160ac965167fa572ffa"
   integrity sha512-BADg1mjGWX18Dpmy6bOGzGNnk7B/ZA0RxuA6qedY/YJwirMfKXIDzcccmHbQI0A6k5PzMdMloc0ElHfyOoX35A==
+
+vue-runtime-helpers@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vue-runtime-helpers/-/vue-runtime-helpers-1.1.2.tgz#446b7b820888ab0c5264d2c3a32468e72e4100f3"
+  integrity sha512-pZfGp+PW/IXEOyETE09xQHR1CKkR9HfHZdnMD/FVLUNI+HxYTa82evx5WrF6Kz4s82qtqHvMZ8MZpbk2zT2E1Q==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
