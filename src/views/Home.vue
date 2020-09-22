@@ -192,7 +192,7 @@ export default {
     },
     process(path) {
       let updates = [];
-      if (path && path.children) updates = path.children.map((child, index) => ({ id: child.id, parent_id: path.id, index }));
+      if (path && path.children) updates = path.children.map((child, index) => ({ id: child.id, parent_id: path.id || null, index }));
       return updates;
     },
   },
